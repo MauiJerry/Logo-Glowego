@@ -1,0 +1,22 @@
+README for Logo-Glowego Git
+
+Logo Glowego is an LED Sculpture developed for Source 2012.
+The home for the project is in the Maui Makers Wiki
+   http://www.mauimakers.com/wiki2/doku.php?id=logo_glowego
+
+The base sculpture is an iron re-bar teardrop shape (Source logo), created for the first event in 2008 and used as a burning edifice at Source. It was decided they would no longer burn it and asked for ideas for reuse. I offered to deck it out in LED tape and interactive. The resulting project utilized 7 arduinos, 12 meters of tape, TFT Display, weather sensors, IR sensors, etc. (see LogoGlowego Parts List for complete list, including software and tools).
+
+This Git will contain all the arduino code (except libraries and IDE from other sources) needed to rebuild the applications.
+
+There were four main applications used:
+* GlowegoControlApp - arduino with all the sensors attached, communicates over serial link to others using EasyTransfer
+* TFTDisplay - teensy 2.0 duino with AdaFruit TFT Display showing sensor packet
+* LED_Controller4 - arduino sketch for the four LPD8806 base RGB LED Strips
+* HL1606_LED_Controller - arduino sketch for the one HL1606 based RGB LED Strip
+
+The libraries folder contains:
+* ButtonWithLED - a button that has an associated LED to indicate state
+* GlowegoContorl - EasyTransfer comma structure. Used a library to insure it is in-sync across all apps
+* MakerMath - couple math functions used with sensors, derived from other sources
+* SharpIRSensor - support for the Sharp IR Distance Sensors (two types)
+* WatherMeter - support for the wind vane and anemometer in the Sparkfun weather sensor product (rain gauge not implemented for Logo-Glowego 2012)
